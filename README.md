@@ -56,14 +56,14 @@ $ npm run dev
 $ yarn typeorm migration:run
 ```
 
-# Run migrations rollback
-```sh
-$ yarn knex:migration:revert
-```
-
 # Create migrations
 ```sh
 $ yarn typeorm migration:create -n MigrationsName
+```
+
+# Run migrations rollback
+```sh
+$ yarn knex:migration:revert
 ```
 
 ##  Info:
