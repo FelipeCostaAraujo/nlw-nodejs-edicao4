@@ -5,6 +5,7 @@
   "main": "src/server.ts",
   "scripts": {
     "test": "NODE_ENV=test jest",
+    "posttest": "rm ./src/database/database.test.sqlite",
     "start": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
