@@ -57,10 +57,6 @@ $ yarn knex:migration:revert
 $ yarn test
 ```
 
-##  Info:
-- Autor - Felipe Araujo:
-- Date February/2021:
-
 ## License
 
 <a href="https://opensource.org/licenses/MIT">
@@ -78,3 +74,9 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para m
 <div align="center">
     <img src=".github/nlw4.jpg" alt="Next Level Week #4">
 </div>
+
+<br>
+
+##  Info:
+- Autor - Felipe Araujo:
+- Date February/2021:
