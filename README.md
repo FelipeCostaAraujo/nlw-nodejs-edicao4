@@ -68,7 +68,7 @@ $ yarn typeorm migration:create -n MigrationsName
 
 ##  Info:
 - Autor - Felipe Araujo:
-- Date February/2020:
+- Date February/2021:
 
 ----
 License
