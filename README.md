@@ -60,6 +60,11 @@ $ yarn typeorm migration:create -n MigrationsName
 $ yarn knex:migration:revert
 ```
 
+# Run tests
+```sh
+$ yarn test
+```
+
 ##  Info:
 - Autor - Felipe Araujo:
 - Date February/2021:
