@@ -1,22 +1,14 @@
-<div align="center">
-    <img src=".github/nlw4.jpg" alt="Next Level Week #4">
-</div>
-
-<div align="center">
-    <img src="https://img.shields.io/badge/-Typescript-blue?style=for-the-badge" alt="Typescript">
-    <img src="https://img.shields.io/badge/-Node.js-orange?style=for-the-badge" alt="Node.js">
-    <img src="https://img.shields.io/badge/-Express-white?style=for-the-badge" alt="Express">
-</div>
-
-<h4 align="center">
-</h4>
-
-<div align="center">
-    <h2>
-    <a href="#-o-projeto">O projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#">Iniciando a jornada</a>
-    </h2>
-</div>
+<p>
+  <img src="https://img.shields.io/badge/made%20by-FELIPE%20ARAUJO-0f5?style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/FelipeCostaAraujo/nlw-nodejs-edicao4?color=0f5&style=flat-square">
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/FelipeCostaAraujo/nlw-nodejs-edicao4?color=0f5&style=flat-square">
+  <a href="https://opensource.org/licenses/MIT">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-0f5?style=flat-square">
+  </a>
+  <a href="https://github.com/FelipeCostaAraujo/nlw-nodejs-edicao4/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/FelipeCostaAraujo/nlw-nodejs-edicao4?color=0f5&style=flat-square">
+  </a>
+</p>
 
 # O projeto
 
@@ -33,11 +25,11 @@ Se você estiver iniciando a jornada e não tem muita familiariadade com alguns 
 As aulas foram ministradas pela **[Daniele Leão](https://github.com/danileao)** instrutora da [Rocketseat](https://rocketseat.com.br/)
 
 
-**Instalação de dependencias e iniciar o projeto.*
+## Instalação e uso
 
 ```sh
 $ cd nlw-nodejs-edicao4
-$ yarn
+$ yarn install
 
 Run Project production DATABASE -
 $ yarn start
@@ -69,7 +61,20 @@ $ yarn test
 - Autor - Felipe Araujo:
 - Date February/2021:
 
-----
-License
-----
-MIT
+## License
+
+<a href="https://opensource.org/licenses/MIT">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-0f5?style=flat-square">
+</a>
+
+<br>
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
+
+---
+
+<br>
+
+<div align="center">
+    <img src=".github/nlw4.jpg" alt="Next Level Week #4">
+</div>
