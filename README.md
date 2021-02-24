@@ -33,23 +33,17 @@ Se você estiver iniciando a jornada e não tem muita familiariadade com alguns 
 As aulas foram ministradas pela **[Daniele Leão](https://github.com/danileao)** instrutora da [Rocketseat](https://rocketseat.com.br/)
 
 
-Instalação de dependencias e iniciar o projeto.
+**Instalação de dependencias e iniciar o projeto.*
 
 ```sh
 $ cd nlw-nodejs-edicao4
-$ npm install 
-- Or
 $ yarn
 
 Run Project production DATABASE -
-$ npm start 
-- Or 
-yarn start
+$ yarn start
 
 Run Development DATABASE
 $ yarn dev
-- Or
-$ npm run dev
 ```
 # Run migrations
 ```sh
