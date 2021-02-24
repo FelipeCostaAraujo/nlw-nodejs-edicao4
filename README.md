@@ -67,10 +67,10 @@ $ yarn typeorm migration:create -n MigrationsName
 ```
 
 ##  Info:
-- Autor - Felipe costa araujo:
-- Date November/2020:
-- Company - Futuro ALLU:
+- Autor - Felipe Araujo:
+- Date February/2020:
+
 ----
 License
 ----
-Apache License
+MIT
