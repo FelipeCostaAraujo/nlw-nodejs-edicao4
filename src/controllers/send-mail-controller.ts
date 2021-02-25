@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { getCustomRepository } from "typeorm";
 import { SurveysRepository } from "../repositories/surveys-repository";
 import { UsersRepository } from "../repositories/users-repository";
+import { SurveysUsersRepository } from "../repositories/surveys-user-repository";
 
 class SendMailController {
     async execute(request: Request, response: Response) {
@@ -9,7 +10,7 @@ class SendMailController {
 
         const usersRepository = getCustomRepository(UsersRepository);
         const surveysRepository = getCustomRepository(SurveysRepository);
-        const surveysUsersRepository = getCustomRepository(SurveysRepository);
+        const surveysUsersRepository = getCustomRepository(SurveysUsersRepository);
 
         const userAlredyExists = await usersRepository.findOne({ email });
 
@@ -26,7 +27,10 @@ class SendMailController {
             });
         }
 
-        //
+        const surveyUser = surveysUsersRepository.create({
+            user_id: userAlredyExists.id,
+            survey_id: surveysAlreadyExists.id
+        })
     }
 }
 
