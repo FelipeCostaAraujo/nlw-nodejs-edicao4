@@ -40,7 +40,7 @@ $ touch production
 $ touch testing
 ```
 
-**Run Project production DATABASE -**
+**Run production DATABASE**
 ```sh
 $ yarn start
 ```
