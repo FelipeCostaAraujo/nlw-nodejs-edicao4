@@ -14,9 +14,9 @@ class SendMailController {
         const surveysRepository = getCustomRepository(SurveysRepository);
         const surveysUsersRepository = getCustomRepository(SurveysUsersRepository);
 
-        const userAlredyExists = await usersRepository.findOne({ email });
+        const user = await usersRepository.findOne({ email });
 
-        if (!userAlredyExists) {
+        if (!user) {
             return response.status(400).json({
                 error: "User does not exists!"
             });
@@ -30,7 +30,7 @@ class SendMailController {
         }
 
         const surveyUser = surveysUsersRepository.create({
-            user_id: userAlredyExists.id,
+            user_id: user.id,
             survey_id: survey.id
         });
 
@@ -38,7 +38,13 @@ class SendMailController {
 
         const npsPath = resolve(__dirname, "..", "views", "emails", "npsMail.hbs");
 
-        await SendmailService.execute(email, survey.title, survey.description, npsPath)
+        const variables = {
+            name: user.name,
+            title: survey.title,
+            description: survey.description
+        }
+
+        await SendmailService.execute(email, survey.title, variables, npsPath)
 
         return response.status(201).json(surveyUser);
     }
