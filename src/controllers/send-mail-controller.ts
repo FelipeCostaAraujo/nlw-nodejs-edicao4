@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
 import { resolve } from 'path';
 import { getCustomRepository } from "typeorm";
-import { getFullUrl } from "../../utils/get-full-url";
 import { SurveysRepository } from "../repositories/surveys-repository";
 import { SurveysUsersRepository } from "../repositories/surveys-user-repository";
 import { UsersRepository } from "../repositories/users-repository";
 import SendmailService from "../services/sendmail-service";
+import { getFullUrl } from "../utils/get-full-url";
 
 class SendMailController {
     async execute(request: Request, response: Response) {
