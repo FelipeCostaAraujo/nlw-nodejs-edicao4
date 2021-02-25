@@ -40,28 +40,31 @@ $ touch production
 $ touch testing
 ```
 
-Run Project production DATABASE -
+**Run Project production DATABASE -**
+```sh
 $ yarn start
+```
 
-Run Development DATABASE
+**Run Development DATABASE**
+```sh
 $ yarn dev
 ```
-# Run migrations
+**Run migrations**
 ```sh
 $ yarn typeorm migration:run
 ```
 
-# Create migrations
+**Create migrations**
 ```sh
 $ yarn typeorm migration:create -n MigrationsName
 ```
 
-# Run migrations rollback
+**Run migrations rollback**
 ```sh
 $ yarn knex:migration:revert
 ```
 
-# Run tests
+**Run tests**
 ```sh
 $ yarn test
 ```
