@@ -1,7 +1,7 @@
 import express from 'express';
-import { router } from './router';
+import { router } from '../src/router';
 import 'reflect-metadata';
-import createConnection from './database';
+import createConnection from '../src/database';
 
 createConnection();
 const app = express();
