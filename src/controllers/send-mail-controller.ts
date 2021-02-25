@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { resolve } from 'path';
 import { getCustomRepository } from "typeorm";
+import { getFullUrl } from "../../utils/get-full-url";
 import { SurveysRepository } from "../repositories/surveys-repository";
 import { SurveysUsersRepository } from "../repositories/surveys-user-repository";
 import { UsersRepository } from "../repositories/users-repository";
@@ -38,10 +39,14 @@ class SendMailController {
 
         const npsPath = resolve(__dirname, "..", "views", "emails", "npsMail.hbs");
 
+        const getUrl = getFullUrl(request);
+
         const variables = {
             name: user.name,
             title: survey.title,
-            description: survey.description
+            description: survey.description,
+            user_id: user.id,
+            link: getUrl + "/answers"
         }
 
         await SendmailService.execute(email, survey.title, variables, npsPath)

@@ -30,6 +30,15 @@ As aulas foram ministradas pela **[Daniele Leão](https://github.com/danileao)**
 ```sh
 $ cd nlw-nodejs-edicao4
 $ yarn install
+```
+
+**Creating environment variables**
+```sh
+$ mkdir .env
+$ cd .env
+$ touch production
+$ touch testing
+```
 
 Run Project production DATABASE -
 $ yarn start

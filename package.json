@@ -6,8 +6,8 @@
   "scripts": {
     "test": "NODE_ENV=test jest",
     "posttest": "rm ./src/database/database.test.sqlite",
-    "start": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-    "dev": "NODE_ENV=test tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "start": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts --env production",
+    "dev": "NODE_ENV=test tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts --env testing",
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
   },
   "repository": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/FelipeCostaAraujo/nlw-nodejs-edicao4#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "handlebars": "^4.7.7",
     "nodemailer": "^6.4.18",
