@@ -56,7 +56,7 @@ $ yarn typeorm migration:run
 
 **Create migrations**
 ```sh
-$ yarn typeorm migration:create -n MigrationsName
+$ yarn typeorm migration:create -n MigrateName
 ```
 
 **Run migrations rollback**
