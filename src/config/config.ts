@@ -6,7 +6,8 @@ const config = {
     user: process.env.DATABASEUSER,
     passwordDataBase: process.env.PASSWORD,
     database: process.env.DATABASE,
-    info: process.env.INFO
+    info: process.env.INFO,
+    saltkey: process.env.SALT_KEY
 }
 
 export default config;

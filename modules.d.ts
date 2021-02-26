@@ -1,5 +1,6 @@
 declare namespace NodeJS {
   export interface ProcessEnv {
+    SALT_KEY: string;
     PORT: number;
     HOST: string;
     DATABASEUSER: string;
