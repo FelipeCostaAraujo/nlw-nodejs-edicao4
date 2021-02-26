@@ -90,5 +90,5 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para m
 <br>
 
 ##  Info:
-- Autor - Felipe Araujo:
+- Author - Felipe Araujo:
 - Date February/2021:
