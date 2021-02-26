@@ -25,7 +25,7 @@ Se você estiver iniciando a jornada e não tem muita familiariadade com alguns 
 As aulas foram ministradas pela **[Daniele Leão](https://github.com/danileao)** instrutora da [Rocketseat](https://rocketseat.com.br/)
 
 
-## Instalação e uso
+## Installation and use
 
 ```sh
 $ cd nlw-nodejs-edicao4
@@ -76,8 +76,7 @@ $ yarn test
 </a>
 
 <br>
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](/LICENSE) file for more details.
 
 ---
 
