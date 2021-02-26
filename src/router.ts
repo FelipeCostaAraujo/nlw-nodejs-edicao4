@@ -21,4 +21,6 @@ router.post('/surveys', surveysController.create)
 
 router.post('/sendMain', sendMainController.execute)
 
+router.get('/nps/:survey_id', npsController.execute)
+
 export { router };
