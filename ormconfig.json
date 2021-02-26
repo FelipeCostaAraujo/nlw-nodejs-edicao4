@@ -1,6 +1,11 @@
 {
-    "type": "sqlite",
-    "database": "./src/database/database.sqlite",
+    "type": "postgres",
+    "host": "localhost",
+    "port": "5432",
+    "username": "nlw",
+    "password": "nlw",
+    "database": "nlw-nps",
+    "synchronize": "true",
     "migrations": [
         "./src/database/migrations/**.ts"
     ],

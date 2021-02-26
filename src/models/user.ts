@@ -12,6 +12,9 @@ class User {
     @Column()
     email: string;
 
+    @Column()
+    password: string;
+
     @CreateDateColumn()
     created_at: Date
 
