@@ -44,7 +44,7 @@ class SendMailController {
             title: survey.title,
             description: survey.description,
             id: "",
-            link: getUrl + "/answers"
+            link: getUrl + "/api/answers"
         }
 
         if (surveyUserAlreadyExists) {
