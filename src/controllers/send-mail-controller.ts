@@ -4,7 +4,6 @@ import { getCustomRepository } from "typeorm";
 import { SurveysRepository } from "../repositories/surveys-repository";
 import { SurveysUsersRepository } from "../repositories/surveys-user-repository";
 import { UsersRepository } from "../repositories/users-repository";
-import sendmailService from "../services/sendmail-service";
 import SendmailService from "../services/sendmail-service";
 import { getFullUrl } from "../utils/get-full-url";
 
@@ -35,20 +34,21 @@ class SendMailController {
 
         const getUrl = getFullUrl(request);
 
+        const surveyUserAlreadyExists = await surveysUsersRepository.findOne({
+            where: { user_id: user.id, value: null },
+            relations: ["user", "survey"]
+        });
+
         const variables = {
             name: user.name,
             title: survey.title,
             description: survey.description,
-            user_id: user.id,
+            id: "",
             link: getUrl + "/answers"
         }
 
-        const surveyUserAlreadyExists = await surveysUsersRepository.findOne({
-            where: [{ user_id: user.id }, { value: null }],
-            relations: ["user", "survey"]
-        });
-
         if (surveyUserAlreadyExists) {
+            variables.id = surveyUserAlreadyExists.id;
             await SendmailService.execute(email, survey.title, variables, npsPath);
             return response.json(surveyUserAlreadyExists);
         }
@@ -59,6 +59,8 @@ class SendMailController {
         });
 
         await surveysUsersRepository.save(surveyUser);
+
+        variables.id = surveyUser.id;
 
         await SendmailService.execute(email, survey.title, variables, npsPath)
 
