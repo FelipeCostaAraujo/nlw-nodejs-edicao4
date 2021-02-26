@@ -4,7 +4,7 @@
   "description": "trilha nodejs quarta edição",
   "main": "src/server.ts",
   "scripts": {
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest -i",
     "posttest": "rm ./src/database/database.test.sqlite",
     "start": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn bin/server.ts --env production",
     "dev": "tsnd --transpile-only --ignore-watch node_modules --respawn src/server.ts --env testing",
