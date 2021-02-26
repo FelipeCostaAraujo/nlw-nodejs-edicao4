@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import { router } from '../src/router';
 import 'reflect-metadata';
 import createConnection from '../src/database';
+import cors from 'cors';
 import { AppError } from '../src/errors/app-error';
 
 createConnection();
@@ -26,12 +27,7 @@ app.use((err: Error, request: Request, response: Response, _next: NextFunction) 
     });
 });
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, x-access-token');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    next();
-});
+app.use(cors);
 
 app.use(express.json());
 app.use("/api", router);
