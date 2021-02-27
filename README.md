@@ -16,6 +16,11 @@ Durante esta **Next Level Week** foi desenvolvida uma API Restful para Net Promo
 
 > O **Net Promoter Score** é uma metodologia de satisfação de clientes desenvolvida para avaliar o grau de **fidelidade dos clientes** de qualquer perfil de empresa.
 
+> Foram feitas algumas melhorias e adições no project.
+- autenticação usando jwt.
+- proteção de rota.
+- docker.
+
 # Iniciando a jornada
 
 Se você estiver iniciando a jornada e não tem muita familiariadade com alguns conceitos, esse guia definitivamente irá lhe ajudar: [Guia Next Level Week #4](https://www.notion.so/Next-Level-Week-4-Node-js-67981103adbb4f229187c802bcd0d787)
