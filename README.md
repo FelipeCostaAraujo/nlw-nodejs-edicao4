@@ -40,6 +40,17 @@ $ touch production
 $ touch testing
 ```
 
+**Example .env file**
+```file
+INFO = STRING
+PORT = INT
+SALT_KEY = UUID
+HOST = STRING
+USERNAME = STRING
+PASSWORD = STRING
+DATABASE = STRING
+```
+
 **Run production DATABASE**
 ```sh
 $ yarn start
