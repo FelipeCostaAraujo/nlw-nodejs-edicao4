@@ -1,11 +1,19 @@
 import { Connection, createConnection, getConnectionOptions } from 'typeorm'
+import config from '../config/config';
 
 export default async (): Promise<Connection> => {
     const defaultOptions = await getConnectionOptions();
 
     return createConnection(
         Object.assign(defaultOptions, {
-            database: process.env.NODE_ENV === 'test' ? "./src/database/database.test.sqlite" : defaultOptions.database
+            type: "postgres",
+            host: config.host,
+            port: 5432,
+            username: config.username,
+            password: config.passwordDataBase,
+            synchronize: true,
+            logging: false,
+            database: process.env.NODE_ENV === 'test' ? "./src/database/database.test.sqlite" : config.database,
         })
     );
 }

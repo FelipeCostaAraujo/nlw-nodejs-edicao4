@@ -3,7 +3,7 @@ declare namespace NodeJS {
     SALT_KEY: string;
     PORT: number;
     HOST: string;
-    DATABASEUSER: string;
+    USERNAME: string;
     PASSWORD: string;
     DATABASE: string;
     INFO: string;
