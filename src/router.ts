@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { AnswerController } from './controllers/answer-controller';
+import { AuthController } from './controllers/auth-controller';
 import { NpsController } from './controllers/nps-controller';
 import { SendMailController } from './controllers/send-mail-controller';
 import { SurveysController } from './controllers/surveys-controller';
@@ -12,15 +13,17 @@ const surveysController = new SurveysController();
 const sendMainController = new SendMailController();
 const answerController = new AnswerController();
 const npsController = new NpsController();
+const authController = new AuthController();
 
-router.get('/surveys', surveysController.show)
+router.get('/surveys', surveysController.show);
 router.get('/answers/:value', answerController.execute);
 
 router.post('/users', userController.create);
-router.post('/surveys', surveysController.create)
+router.post('/surveys', surveysController.create);
+router.post('/auth', authController.auth);
 
-router.post('/sendMain', sendMainController.execute)
+router.post('/sendMain', sendMainController.execute);
 
-router.get('/nps/:survey_id', npsController.execute)
+router.get('/nps/:survey_id', npsController.execute);
 
 export { router };
