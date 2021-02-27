@@ -8,7 +8,7 @@ export default async (): Promise<Connection> => {
         Object.assign(defaultOptions, {
             type: "postgres",
             host: config.host,
-            port: 5432,
+            port: config.postgress_port,
             username: config.username,
             password: config.passwordDataBase,
             synchronize: true,

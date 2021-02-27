@@ -56,6 +56,12 @@ PASSWORD = STRING
 DATABASE = STRING
 ```
 
+**Create image POSTGRES**
+```sh
+$ docker-compose build
+$ docker-compose up -d
+```
+
 **Run production DATABASE**
 ```sh
 $ yarn start
