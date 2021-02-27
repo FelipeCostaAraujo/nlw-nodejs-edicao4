@@ -1,8 +1,8 @@
-version: "3.7"
+version: "3"
 services:
   postgres:
-    container_name: "psql"
-    image: "postgres:9.6.1"
+    container_name: "db"
+    image: "postgres:11.2"
     environment:
       POSTGRES_USER: nlw
       POSTGRES_PASSWORD: nlw
