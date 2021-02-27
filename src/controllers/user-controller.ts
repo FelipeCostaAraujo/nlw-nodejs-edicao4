@@ -3,28 +3,29 @@ import { getCustomRepository } from "typeorm";
 import { UsersRepository } from "../repositories/users-repository";
 import * as yup from 'yup';
 import { AppError } from "../errors/app-error";
+import ValidationContract from '../validators/fluent-validator';
 
 class UserController {
 
     async create(request: Request, response: Response) {
-        const { email, name } = request.body;
+        const { email, name, password } = request.body;
 
-        const schema = yup.object().shape({
-            name: yup.string().required(),
-            email: yup.string().email().required()
-        });
+        const contract = new ValidationContract();
 
-        try {
-            await schema.validate(request.body, { abortEarly: false });
-        } catch (ex) {
-            return response.status(400).json({ error: ex });
+        contract.hasMinLen(name, 6, 'The name must contain at least 6 characters');
+        contract.isEmail(email, 'Invalid email');
+        contract.hasMinLen(password, 6, 'The password must contain at least 6 characters');
+
+        if (!contract.isValid()) {
+            return response.status(400).send(contract.error()).end();
         }
 
         const usersRepository = getCustomRepository(UsersRepository);
 
         const user = usersRepository.create({
             name,
-            email
+            email,
+            password
         });
 
         const userAlreadyExists = await usersRepository.findOne({

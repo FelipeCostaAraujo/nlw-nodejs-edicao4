@@ -1,15 +1,20 @@
-version: "2"
+version: "3"
 services:
   nodejs:
     image: felipearaujo/nps-nlw:latest
     build: .
     ports:
-      - 4000
+      - "4000:4000"
     depends_on:
       - db
   db:
-    image: postgres
+    container_name: "db"
+    image: "postgres:11.2"
     volumes:
-      - ./dados_postgres:/var/lib/postgresql/data
+      - ./postgres_data:/var/lib/psotgresql/data
+    environment:
+      POSTGRES_USER: nlw
+      POSTGRES_PASSWORD: nlw
+      POSTGRES_DB: "nlw-nps"
     ports:
-      - 5432
+      - "5432:5432"

@@ -106,3 +106,6 @@ dist
 **/**.sqlite
 src/database/**.sqlite
 
+./postgres_data
+/postgres_data
+

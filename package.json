@@ -10,6 +10,9 @@
     "dev": "nodemon bin/server.ts --env testing",
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
   },
+  "engines": {
+    "node": "12"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FelipeCostaAraujo/nlw-nodejs-edicao4.git"

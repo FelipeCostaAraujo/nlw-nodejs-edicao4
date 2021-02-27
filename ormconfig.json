@@ -1,11 +1,11 @@
 {
     "type": "postgres",
     "host": "localhost",
-    "port": "5432",
+    "port": 5432,
     "username": "nlw",
     "password": "nlw",
     "database": "nlw-nps",
-    "synchronize": "true",
+    "synchronize": true,
     "migrations": [
         "./src/database/migrations/**.ts"
     ],
