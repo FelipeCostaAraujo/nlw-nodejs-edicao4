@@ -4,6 +4,7 @@ import config from '../config/config';
 export default async (): Promise<Connection> => {
     const defaultOptions = await getConnectionOptions();
 
+    console.log(config);
     return createConnection(
         Object.assign(defaultOptions, {
             type: "postgres",
