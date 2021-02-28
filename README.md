@@ -57,6 +57,30 @@ PASSWORD = STRING
 DATABASE = STRING
 ```
 
+> While installation is in progress, edit the ormconfig.json file and put your own database connection configuration options in there:
+
+```json
+{
+   "type": "postgres",
+   "host": "localhost",
+   "port": 3306,
+   "username": "test",
+   "password": "test",
+   "database": "test",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ]
+}
+```
+
 **Create image POSTGRES**
 ```sh
 $ docker-compose build
