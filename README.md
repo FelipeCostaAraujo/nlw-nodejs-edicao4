@@ -57,7 +57,7 @@ PASSWORD = STRING
 DATABASE = STRING
 ```
 
-> While installation is in progress, edit the ormconfig.json file and put your own database connection configuration options in there:
+> While installation is in progress, edit the **ormconfig.json** file and put your own database connection configuration options in there:
 
 ```json
 {
