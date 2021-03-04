@@ -25,7 +25,7 @@ Foram feitas algumas melhorias e adições no projeto.
 
 Se você estiver iniciando a jornada e não tem muita familiariadade com alguns conceitos, esse guia definitivamente irá lhe ajudar: [Guia Next Level Week #4](https://www.notion.so/Next-Level-Week-4-Node-js-67981103adbb4f229187c802bcd0d787)
 
-# 📝 Sobre
+# Sobre
 
 As aulas foram ministradas pela **[Daniele Leão](https://github.com/danileao)** instrutora da [Rocketseat](https://rocketseat.com.br/)
 
@@ -91,17 +91,6 @@ $ yarn knex:migration:revert
 ```sh
 $ yarn test
 ```
-
-## License
-
-<a href="https://opensource.org/licenses/MIT">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-05C11B?style=flat-square">
-</a>
-
-<br>
-This project is under the MIT license. See the [LICENSE](/LICENSE) file for more details.
-
----
 
 <br>
 
