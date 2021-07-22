@@ -15,13 +15,13 @@ server.on('listening', onListening);
 console.log("Running " + config.info + " Server in Port: " + port);
 
 function normalizePort(val: any) {
-    const port = parseInt(val, 10);
+    const portNormalize = parseInt(val, 10);
 
-    if (isNaN(port)) {
+    if (isNaN(portNormalize)) {
         return val;
     }
-    if (port >= 0) {
-        return port;
+    if (portNormalize >= 0) {
+        return portNormalize;
     }
     return false;
 }

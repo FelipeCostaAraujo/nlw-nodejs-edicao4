@@ -4,7 +4,6 @@ import "express-async-errors";
 
 import createConnection from '../src/database';
 import bodyParser from 'body-parser';
-import cors from 'cors';
 
 import { AppError } from '../src/errors/app-error';
 import { router } from '../src/router';
@@ -12,13 +11,21 @@ import { router } from '../src/router';
 createConnection();
 const app = express();
 
+app.disable("x-powered-by");
+
 app.use(bodyParser.json({
     limit: '10mb'
 }));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(cors());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, x-access-token');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+});
+
 app.use(express.json());
 app.use("/api", router);
 
