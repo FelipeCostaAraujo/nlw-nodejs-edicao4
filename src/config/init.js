@@ -18,13 +18,10 @@ module.exports = () => {
   });
 
   if (envFile.error) {
-    switch (envFile.error.code) {
-      case 'ENOENT':
-        console.error('The .env file is not located, please check if file exists!');
-        break;
-      default:
-        console.error('Can not open the .env file. Check if structure of file have correct format!');
-        break;
+    if (envFile.error.code == 'ENOENT') {
+      console.error('The .env file is not located, please check if file exists!');
+    } else {
+      console.error('Can not open the .env file. Check if structure of file have correct format!');
     }
     process.exit(0);
   }

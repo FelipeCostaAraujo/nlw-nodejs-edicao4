@@ -10,7 +10,6 @@ app.set('port', port);
 
 server.listen(port);
 server.on('error', onError);
-server.on('listening', onListening);
 
 console.log("Running " + config.info + " Server in Port: " + port);
 
@@ -40,17 +39,10 @@ function onError(error: any) {
             process.exit(1);
             break;
         case 'EADDRINUSE':
-            console.error(bind + ' is already in use');;
+            console.error(bind + ' is already in use');
             process.exit(1);
             break;
         default:
             throw error;
     }
-}
-
-function onListening() {
-    const addr: any = server.address();
-    const bind = typeof addr === 'string'
-        ? 'pipe ' + addr
-        : 'port ' + addr.port;
 }
