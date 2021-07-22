@@ -40,7 +40,7 @@ function onError(error: any) {
             process.exit(1);
             break;
         case 'EADDRINUSE':
-            console.error(bind + ' is already in use');;
+            console.error(bind + ' is already in use');
             process.exit(1);
             break;
         default:
@@ -50,7 +50,4 @@ function onError(error: any) {
 
 function onListening() {
     const addr: any = server.address();
-    const bind = typeof addr === 'string'
-        ? 'pipe ' + addr
-        : 'port ' + addr.port;
 }
